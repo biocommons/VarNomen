@@ -3,12 +3,9 @@ layout: recommendation
 parent: Protein
 title: deletion
 definition: 
-    Word1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ipsum.
-    Word 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio optio ipsum sunt voluptate! Nihil tempora quo, quas, facere vero culpa amet aliquid soluta accusantium eum ut dignissimos dolor ullam. Inventore.
+    Deletion: a sequence change where, compared to a reference sequence, one or more amino acids are not present (deleted).
 discussion:
-    Question1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ipsam.
-    Q2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis animi soluta repellendus, dolores tempora sequi. Laboriosam nesciunt tempore, voluptatibus obcaecati ex.
-    Q3: Lorem ipsum dolor sit.
+    Can I use p.Glu123del6 to describe a 6 amino acid deletion?: No, a deletion of more than one amino acid should list the first and last amino acid deleted, separated using the range symbol ("_", underscore), e.g. p.Glu123_Pro128del and not p.Glu123del6.
 ---
 
 

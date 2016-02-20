@@ -150,6 +150,9 @@ Depending on the variants to be reported, different reference sequence files are
 	:	The mtDNA genome is rather small and completely sequenced. Variants in the mitochondrial DNA should therefore be described in relation to a the full mitochondrial DNA sequence, i.e. for human [_the _Homo sapiens_ mitochondrion, complete genome (GenBank NC_012920.1)_](http://www.ncbi.nlm.nih.gov/nucleotide/NC_012920.1). Descriptions should be preceded by "m.", like m.8993T>C. The mtDNA encodes a range of different proteins. Changes at protein level should be described based on a protein reference sequence, e.g. YP_003024031.1:p.Leu156Pro.
 	:	_**NOTE**_:	for issues related to mitochondrial DNA sequences [_see MITOMAP_](http://www.mitomap.org/).
 
+*	We are characterizing variants in nuclear encoded proteins that function in mitochondria. These proteins have amino terminal mitochondrial signal peptides which are removed to get the mature protein. Some investigators begin numbering at the first amino acid residue of the mature protein. Is this correct? (_Dean J Danner, Atlanta_)
+	:	No. As already suggested in your question, protein reference sequences should always represent the complete primary translation product, not a processed mature or functional protein.  
+
 *	How should variants be described in genes that produce only RNA (so no protein), e.g. ncRNA, miRNA, and others?
 	:	To describe variants in genes that produce an RNA molecule but no protein a genomic reference sequence can be used ("**g.**" description). When a non-coding DNA reference sequence is available, e.g. a LRG (NR_002196.1 for the H19 transcript) or a RefSeq transcript (NR_000020.1 for the small nucleolar RNA, C/D box 33 (SNORD33) gene), variants can be described using the prefix "**n.**" [see [_Community Consultation SVD-WG002_(/bg-material/community/SVD-WG002) and [_Nucleotide numbering_](/bg-material/numbering)).
 

@@ -38,6 +38,7 @@ Note that although the examples on these pages mainly give examples for human (_
 	*	the 3'rule also applies for changes in single residue stretches or tandem repeats  (nucleotide or amino acid)
 *	**prioritisation**: when a description is possible according to several types, the preferred description is: (1) deletion, (2) inversion, (3) duplication, (4) conversion, (5) insertion.
 	* when a variant can be described as a duplication or an insertion, prioritisation determines it should be described as a duplication.
+*	variants on the protein level should be described based on the protein reference sequence, irrespective of the underlying DNA variant ([_see Discussion_](#protonly))
 *	only **approved [HGNC gene symbols](http://www.genenames.org)** should be used to describe genes or proteins.
 
 * * *
@@ -48,14 +49,14 @@ In HGVS nomenclature some **characters** have a **specific meaning**
 
 *	"**<font color="red">+</font>**" (plus) is used in [_nucleotide numbering_]((bg-material/numbering/)
 *	"**<font color="red">-</font>**" (minus) is used in [_nucleotide numbering_]((bg-material/numbering/)
-*	"**<font color="red">*</font>****" (asterisk) is used in [_nucleotide numbering_]((bg-material/numbering/) and to indicate a translation termination (stop) codon [_see Standards_](/bg-material/standards#RNAcode)
+*	"**<font color="red">*</font>**" (asterisk) is used in [_nucleotide numbering_]((bg-material/numbering/) and to indicate a translation termination (stop) codon [_see Standards_](/bg-material/standards#RNAcode)
 *	"**<font color="red">_</font>**" (underscore) is used to indicate a range; g.12345**<font color="red">_</font>**12678del or c.123**<font color="red">_</font>**124insG
 *	"**<font color="red">[ ]</font>**" (angled brackets) are used for alleles (see [_DNA_](/recommendations/DNA/variant/alleles), [_RNA_](/recommendations/RNA/variant/alleles), [_protein_](/recommendations/protein/variant/alleles))
 	*	"**<font color="red">;</font>**" (semi colon) is used to separate variants or alleles
 	*	"**<font color="red">,</font>**" (comma) is used to separate different transcripts/proteins derived from one allele
 *	"**<font color="red">:</font>**" (colon) is used to separate the reference sequence file identifier (_accession.version_number_) from the actual description of a variant; NC_000011.9**<font color="red">:1</font>**g.12345611G>A
 *	"**<font color="red">( )</font>**" (parentheses) are used to indicate uncertainties, e.g. when the exact position of a change is not known; g.(1267_1270)insG<br>
-	_**NOTE**_: the range of the uncertainty should be described as precisely as possible [_see below_](#uncertain1)
+	_**NOTE**_: the range of the uncertainty should be described as precisely as possible [_see Discussion_](#uncertain1)
 *	"**<font color="red">?</font>**" (question mark) is used to indicate unknown positions (nucleotide or amino acid); g.12345_(23456_?)del
 *	"**<font color="red"></font>**" (caret) is used as "or" in the back translation of protein variants to DNA level descriptions; c.(370A>C**<font color="red"></font>**372C>R) as back translation of p.Ser124Arg
 *	"**<font color="red">&gt;</font>**" (greater then) is used to describe substitution variants (DNA and RNA level); g.12345A>T, r.123a>u (for details see [_DNA_](/recommendations/DNA/variant/substitution), [_RNA_](/recommendations/RNA/variant/substitution))
@@ -99,6 +100,14 @@ Specific abbreviations are used to describe different variant types.
 *	Why is it recommended to use **three-letter amino acid code** to describe protein variants?
 :	Several amino acids start with the same initial letter (**<font color="red">A</font>**la, **<font color="red">A</font>**rg, **<font color="red">A</font>**sn, **<font color="red">A</font>**sp start with **<font color="red">A</font>**, **<font color="green">G</font>**ln, **<font color="green">G</font>**lu, **<font color="green">G</font>**ly with **<font color="green">G</font>**, **<font color="blue">L</font>**eu, **<font color="blue">L</font>**ys with **<font color="blue">L</font>**, **<font color="red">P</font>**he, **<font color="red">P</font>**ro with **<font color="red">P</font>** and **<font color="green">T</font>**hr, **<font color="green">T</font>**yr with **<font color="green">T</font>**) but in one-letter amino acid code this letter is used as abbreviation for only one. In practice this leads to many mistakes. It is therefore better to use three-letter amino acid code. 
 
+<a name="protonly"></a>
+
+*	What do you mean with "variants on protein level should be described based on the protein reference sequence used, **irrespective** of the underlying DNA variant"?
+:	When describing a variant at the protein level you should "forget" what the underlying DNA variant is. The predicted consequence of the change ATGTCT**<font color="red">AGC</font>**TCTTGC (MetSerSerSerCys) to ATGTCT**<font color="red">_</font>**TCTTGC (MetSerSer**<font color="red">_</font>**Cys) is p.(Gln4del) and not p.(Gln3del) because you **know** that on DNA the codon for Ser3 (AGC) is deleted.
+
+*	When it is known exactly which amino acid is affected, e.g. c.9_10insAGC changing the sequence ATGTCAAGCTCT (MetSerSerSer) to ATGTCAAGCAGCTCT (MetSerSerSerSer), do I then still describe this as p.(Ser4dup) although I know Ser3 was duplicated? <i>(Sven Arnold, Austria)</i>
+:	Yes, p.(Ser4dup) is correct, you describe what happens on the protein level, information from DNA level is not used (see previous question).
+
 <a name="uncertain1"></a>
 
 *	Can I describe a deletion when I have not yet sequenced the break point?
@@ -136,8 +145,11 @@ _**NOTE**_: when a probe location is used the recommendation is to use the centr
 	:	The description uses the basic format **(position-last-positive-PCR_position-first-negative-PCR)_ (position-last-negative-PCR_position-first-positive-PCR)**. In PCR a pair of short oligonucleotides is used to detect the presence (amplification) of a speficic sequence (target). Effectively, when PCR fails, it means that either or both oligonucleotides did not hybridize to the 20-30 nucleotide target sequence. For variant descriptions the recommendation is to indicate **presence at the 5' side** using the most 3' nucleotide of the primer pair, **presence at the 3' side** using the most 5' nucleotide of the primer pair, **absence at the 5' side** using the most 5' nucleotide of the primer pair and **absence at the 3' side** using the most 5' nucleotide of the primer pair. For details [_see Deletions_](/recommendations/DNA/variant/deletion/) or [_Duplications_](/recommendations/DNA/variant/duplication/).<br>
 _**NOTE**_: when, like in MLPA (see above), one primer pair is used per exon it is allowed to assume the entire exon is affected (deleted or duplicated) and to base the description on the exon/intron borders.
 
-*	Is it correct that when I apply **the 3'rule** "g." and "c." variant descriptions for genes that are on the minus strand of a chromosome may differ regarding the nucleotide that I describe as deleted?
+*	Is it correct that when I apply **the 3'rule** to "g." and "c." variant descriptions for genes that are on the minus strand of a chromosome may differ regarding the nucleotide that I describe as deleted?
 	:	Yes, when a gene is on the minus strand of a chromosome (opposite transcriptional orientation) and the change is located in a repeated sequence (mono-, di-, tri-, etc. nucleotide stretches) the 3'rule has this as a consequence. When the chromosome sequence is -TGGGGCAT- and one of the G's is deleted (change to -TGGG_CAT-) the description based on chromosome coordinates is g.5delG. When the annotated coding DNA reference sequence is on the minus strand (ATGCCCCA) the description is c.7delC. Not only is the deleted nucleotide different (delG vs. delC), in fact the descriptions also point to another nucleotide, g.5 vs. g.2 (equivalent to c.7delC).
+	
+*	The description of variants started before there were first recommendations, e.g. in thalassemias and cystic fibrosis. Should we keep using the original descriptions?
+	:	No. Nomenclature rules should be universal and avoid exceptions wherever possible. Old, "**legacy** descriptions are only recognised by experts in the field, for others they often make no sense and cause confusion. When desired, traditional descriptions can always be listed **in addition to** the official descriptions, e.g. c.24dupG next to Cd8/9+G, p.Phe508del next to delF508.
 
 
 

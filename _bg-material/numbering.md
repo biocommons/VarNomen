@@ -61,7 +61,10 @@ nucleotide numbering for a RNA reference sequencing follows that of the associat
 
 ### Protein reference sequences
 
-amino acid numbering is simple; p.1, p.2, p.3, ..., etc. from the first to the last amino acid of the reference sequence. Amino acid numbers based on a protein reference sequence **do not include** "+", "-", "*" or other prefixes.
+amino acid numbering is simple; p.1, p.2, p.3, ..., etc. from the first to the last amino acid of the reference sequence.
+
+*	in extension variants ([_see Protein Extension_](/recommendations/protein/variant/extension/)) amino acid residues upstream (N-terminal) of the ATG-translation initiation codon (start) are marked with a "**-**" (minus) and numbered p.Xxx-1, c.Xxx-2, c.Xxx-3, etc. (i.e. going further upstream)
+*	in extension variants ([_see Protein Extension_](/recommendations/protein/variant/extension/)) amino acid residues downstream (C-terminal) of the translation termination codon (stop) are marked with a "\*" (asterisk) and numbered c.Xxx\*1, c.Xxx\*2, c.Xxx\*3, etc. (i.e. going further downstream)
 
 * * * 
 

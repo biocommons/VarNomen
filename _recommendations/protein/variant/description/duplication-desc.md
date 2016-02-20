@@ -4,9 +4,21 @@ title: duplication
 category: description
 ---
 
-Duplications are described using "**_dup_**" after an indication of the first and last amino acid(s) duplicated separated by a "\_" (_underscore_). In-frame duplications containing a translation stop codon in the duplicated sequence are described as an insertion of a [nonsense variant](file:///Users/Boomheide/Files/WWW/HGVS/recs-prot.html#nonsense), not as a deletion-insertion removing the entire C-terminal amino acid sequence.
+Format: **“prefix”“amino\_acid(s)+position(s)\_duplicated”“dup”**, e.g. p.Glu123\_Cys127dup
 
-*   p.Gly4_Gln6dup in the sequence MKMGHQQQCC denotes a duplication of amino acids Glycine-4 (Gly, G) to Glutamine-6 (Gln, Q) (i.e. MKMGHQ**<u>GHQ</u>**QQCC)
-*   duplicating insertions in single amino acid stretches (or short tandem repeats) are described as a duplication, e.g. a duplicating HQ insertion in the HQ-tandem repeat sequence of MKMGHQHQCC to MKMGHQHQ**<u>HQ</u>**CC is described as p.His7_Gln8dup (not p.Gln8_Cys9insHisGln)
+**“prefix”**  =  reference sequence used  =  p.<br>
+**“amino\_acid(s)+position(s)\_duplicated”**  =  amino acid with position or amino acids with position range duplicated  =  Glu123\_Cys127<br>
+**“dup”**  =  type of change is a duplication  =  dup
 
-_**NOTE:**_ for all descriptions the **most C-terminal position** possible is arbitrarily assigned to have been changed
+---
+
+### Notes
+
+*	**prefix** reference sequence accepted is p. (protein).
+*	“amino\_acid+position\_duplicated” should contain **one** amino acid with position, “amino\_acids+positions\_duplicated” should contain **two different** positions, i.e. 123_126 but not 123_123.
+*	“positions\_duplicated” should be listed from **5’ to 3’**, e.g. 123_126 but not 126_123.
+*	for all descriptions the **most C-terminal position** possible is arbitrarily assigned to have been duplicated (**3'rule**)
+*	by definition, duplication may only be used when the additional copy is **directly 3'-flanking** of the original copy (a "tandem duplication"). 
+*	when there is no evidence that the extra copy of a sequence detected is in tandem (directly 3'-flanking) the original copy, the change can not be described as a duplication, it should be described as **[_an insertion_](/recommendations/protein/variant/insertion/)**.
+*	under discussion, [_see Open Issues_](/recommendations/open-issues/#imperfectcopy)
+	:	{ } (curly braces) can be used to list any change in the duplicated sequence which is different when compared to the source, e.g. p.Pro45\_Cys80dup**{Gly63Arg}**

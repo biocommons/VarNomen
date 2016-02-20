@@ -9,9 +9,9 @@ Sequence changes can be very complex, involving a range of changes at one specif
 To add, details on HGVS & ISCN proposal (SVD-WG004).
 
 *	mosaicism
-	:	g.[=/176T>A] describes a mosaic case where at position g.176 besides the normal sequence (a T, described as '=') also chromosomes are found containing an A (g.176T>A)
+	:	g.176[T=/T>A] describes a mosaic case where at position g.176 besides the normal sequence (a T, described as "T=") also chromosomes are found containing an A (g.176T>A)
 *	chimerism
-	:	g.[=//1887G>C] describes a chimeric case where at position g.1887 besides the normal sequence (a G, described as '=') also cells are found containing an C (c.1887G>C)
+	:	g.1887[G=//1887G>C] describes a chimeric case where at position g.1887 besides the normal sequence (a G, described as "G=") also cells are found containing an C (c.1887G>C)
 *	translocation
 	:	to be added
 *	translocation

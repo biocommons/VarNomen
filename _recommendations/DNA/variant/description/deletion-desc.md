@@ -15,5 +15,6 @@ Format:  **"prefix""position(s)_deleted""del"**,  e.g. g.123_127del
 ### Note
 
 *	**prefix** reference sequences accepted are g., m., c. and n. (genomic, mitochondrial, coding DNA and non-coding DNA).
-*	the "position(s)_deleted" should contain **two different positions**, e.g. 123_126 but not 123_123.
-*	the "position(s)_deleted" should be listed from **5' to 3'**, e.g. 123_126 but not 126_123.
+*	“position\_deleted” should contain **one** position, “positions\_deleted” should contain **two different** positions, i.e. 123\_126 but not 123\_123.
+*	"positions_deleted" should be listed from **5' to 3'**, e.g. 123_126 but not 126_123.
+*	for all descriptions the **most 3 position** possible is arbitrarily assigned to have been deleted (**3'rule**)
