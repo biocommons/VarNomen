@@ -15,23 +15,12 @@ The proposal suggests to specify the HGVS recommendations for acceptable Referen
 
 ### Backgound
 
-A sequence variant is defined in the context of a **reference sequence** which MUST be referred to by means of a unique **sequence identifier**. Because a reference sequence defines the numbering system (http://varnomen.hgvs.org/bg-material/numbering/) and default state of a sequence (e.g. coding transcript, non-coding transcript), accurately interpreting a sequence variant requires that both the reference sequence and its reference sequence identifier are unchangeable.
+A sequence variant is defined in the context of a **reference sequence** which MUST be referred to by means of a unique **sequence identifier**. Because a reference sequence defines the [numbering system](http://varnomen.hgvs.org/bg-material/numbering/){:target="\_blank"} and default state of a sequence (e.g. coding transcript, non-coding transcript), accurately interpreting a sequence variant requires that both the reference sequence and its reference sequence identifier are unchangeable.
 
-*	RNA fusion transcripts are described following the format to describe a fusion between two DNA molecules (translocations), i.e. using **"::"**.
+### Proposal
 
-* * *
-
-#### Examples
-
-*	translocation fusion:  NM\_152263.2:r.-115\_775::NM\_002609.3:r.1580\_\*1924
-	:	a TPM3-PDGFRB fusion transcript where nucleotides r.-115 to r.775 (reference transcrip NM\_152263.2, TPM3 gene) are coupled to nucleotides r.1580 to r.\*1924 (reference transcript NM\_002609.3, PDGFRB gene)
-*	deletion fusion:  NM\_002354.2:r.-358_555::NM\_000251.2:r.212\_\*279
-	:	EPCAM-MSH2 fusion transcript where nucleotides r.-358 to r.555 (reference transcrip NM\_002354.2, EPCAM gene) are coupled to nucleotides r.212 to r.\*279 (reference transcript NM\_000251.2, MSH2 gene)
-*	NOTES
-	:	a format like "**::aggcucccuugg::**" is used to indicate the insertion of a 12 nucletoide sequence (aggcucccuugg) between two fusion transcripts
-
-* * *
-
-#### NOTE
-
-All fusion transcripts are described using the same format irrepsective of whether they derive from inter-chromosomal or intra-chromosomal rearrangements (translocation, deletion, inversion)
+*	reference sequences **must** come from data sources that provide stable and permanent identifiers, e.g. RefSeq and Ensembl. A source that permits updating of sequence records associated with an existing sequence identifier MUST NOT be used, i.e. a change in the reference sequence MUST trigger a change in the sequence identifier.
+	*	Rationale: violating this requirement means that interpretation of a variant might change over time
+*	reference sequences **must** use conventional representation, i.e. the sequence comprises a string of IUPAC residues that represents a nucleic acid or amino acid sequence using the conventional order (5'-to-3' for nucleic acid sequences, and amino-to-carboxyl for amino acid sequences), and may include [IUPAC symbols](http://http://varnomen.hgvs.org/bg-material/standards/){:target="\_blank"} for any base (N) or any amino acid (X)
+*	reference sequence **must** be contiguous. Undefined sequence is not permissible.
+	*	this requirement applies within a **single** sequence. Alignments **between** sequences may contain gaps. For example, a coding sequence will contain intron gaps when aligned to a genomic sequence
