@@ -136,6 +136,7 @@ Depending on the variants to be reported, different reference sequence files are
 		*	note that **LRG's are stable** (never change), established after consulting different experts and that all known transcript variants and protein isoforms can be annotated
 	*	"**pending**” LRGs should not be used, they might change before being approved
 	*	while a LRG is requested, the use of a RefSeq sequence is recommended, e.g. NM\_004006.2 ([see O'Leary 2016](http://nar.oxfordjournals.org/content/44/D1/D733.full.pdf){:target="\_blank"})
+	*	the [MANE (Matched Annotation between NCBI and EBI) project](https://www.ensembl.org/info/genome/genebuild/mane.html){:target="\blank"} is a joint initiative between EMBL-EBI’s Ensembl project and NCBI’s RefSeq project to release a genome-wide transcript set that contains one well-supported transcript per protein-coding locus. All transcripts in the MANE set will perfectly align to GRCh38 and will represent 100% identity (5’ UTR, coding sequence, 3’ UTR) between the RefSeq (NM\_) and the corresponding Ensembl (ENST) transcript. The matched transcript files are standard RefSeq and Ensembl reference sequence types as defined above and **do not represent additional files**. The standard NM\_ and ENST identifers are used for these transcipts: there are no separate project-specific identifiers.	
 *	a coding DNA reference sequence does **not contain** intron or 5' and 3' gene flanking sequences and can therefore **not be used** to describe variants in introns and up/down-stream of the gene
 *	when, based on a genomic reference sequence, variants are reported using a "**c.**" prefix, the transcript variant used should be indicated
 	*	for LRG\_'s an annotated "**transcript variant 1**" is described as "**<font color="red">t1</font>**", e.g. LRG\_199**<font color="red">t1</font>**:c.11T>G
@@ -206,10 +207,6 @@ Depending on the variants to be reported, different reference sequence files are
 Why not? Two reasons:
 *	because it creates a "tight coupling" between two systems that have no coordination. For example, what if NCBI wants to change the meaning of the identifers?
 *	because it precludes other systems that might have perfectly valid identifiers. In particular, the thinking here relates to future graph genome work in which segments might be referred to by other identifiers (perhaps identifiers not even shared). If the implementation were to **require** that g. variant accessions start with NC\_ (or any predefined list), it would make it impossible to use that software in other contexts
-
-{:#note2}
-
-(2) the [MANE (Matched Annotation between NCBI and EBI) project](https://www.ensembl.org/info/genome/genebuild/mane.html){:target="\blank"} is a joint initiative between EMBL-EBI’s Ensembl project and NCBI’s RefSeq project to release a genome-wide transcript set that contains one well-supported transcript per protein-coding locus. All transcripts in the MANE set will perfectly align to GRCh38 and will represent 100% identity (5’ UTR, coding sequence, 3’ UTR) between the RefSeq (NM\_) and the corresponding Ensembl (ENST) transcript. The matched transcript files are standard RefSeq and Ensembl reference sequence types as defined above and **do not represent additional files**. The standard NM\_ and ENST identifers are used for these transcipts: there are no separate project-specific identifiers.
 
 * * *
 
