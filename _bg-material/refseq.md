@@ -26,7 +26,7 @@ A sequence variant is defined in the context of a **reference sequence** which m
 	*	sequence identifiers are opaque ([_note 1_](#note1)), i.e. the structure and meaning of an identifier is determined by the source reference sequence database
 	*	versioned reference sequence identifiers are required only when the reference sequence databases use versioning to distinguish between unique sequences
 		*	RefSeq and Ensembl reference sequence identifiers use version numbers to distinguish between sequences. In the context of these reference sequences, variant descriptions lacking a version number are **not** valid. NG\_012232**<font color="red">.1</font>** is correct, NG\_012232 is not correct (lacks the essential version number)
-		*	LRG's provide equivalent uniqueness but does not use version numbers
+		*	LRG's provide equivalent uniqueness but do not use version numbers
 		*	the sequence identifier **must** be included in **all** representations of a reference sequence, i.e. annotated records and downloadable formats such as fasta files
 *	only reference sequences considered to be **“complete”** (as defined in the bullet points below) are suitable for defining sequence variation. The reference sequence database **must** provide a mechanism which allows simple and definitive identification of **"complete"** sequences
 	*	the mechanism that identifies a complete record may be embedded in the sequence identifier or may be defined within the reference sequence record
@@ -39,10 +39,8 @@ A sequence variant is defined in the context of a **reference sequence** which m
 *	the **recommended reference** is a genomic reference sequence based on a recent genome build, e.g. NC\_000023.11 (for _Homo sapiens_ chromosome X, build GRCh38/hg38)
 *	specifications to a specific annotated segment of a reference sequence can be given in parentheses directly after the reference sequence
 	*	NG\_012232.1(NM\_004006.2) indicates that the variant to be described, is based on the coding DNA reference sequence NM\_004006.2 as annotated in NG\_012232.1
-	*	accepted specifications include transcripts (NM\_004006.2, DMD\_v001, MT-TL1) or proteins (NP\_003997.1, DMD\_i001, YP\_003024028.1)
-		*	(DMD\_v001) indicates the first DMD transcript (CDS) **<font color="red">v</font>**ariant annotated; can be used when transcript reference sequence records are not available
-		*	(DMD\_i001) indicates the first DMD protein **<font color="red">i</font>**soform annotated; can be used when protein reference sequence records are not available
-		*	(DMD) indicates the gene as annotated in the file; only approved HGNC gene symbols are allowed
+	*	accepted specifications include transcripts (NM\_004006.2), proteins (NP\_003997.1) or genes (DMD)
+		*	for genes only approved HGNC gene symbols are allowed
 *	the reporting of sequence variants **must** be with respect to the most appropriate reference sequence and the entirety of the variant sequence **must** be encompassed by the selected reference sequence
 	*	the reference sequence used **must contain** the variant residue that is described as being changed
 	*	a **coding** or **non-coding** DNA reference sequence does not contain intron or 5' and 3' gene flanking sequences and can therefore **not be used** to describe variants in introns and up/down-stream of the gene
