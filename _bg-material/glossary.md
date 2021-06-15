@@ -63,7 +63,7 @@ Please note that this Glossary is **work in progress**. Do you encounter missing
     
 *   conversion
     :   **HGVS**-DNA: a sequence change where, compared to a reference sequence, a range of nucleotides are replaced by a sequence from elsewhere in the genome.
-    :   descriptions _see Recommendations_ [_DNA_](/recommendations/DNA/variant/conversion/) or  [_RNA_](/recommendations/RNA/variant/conversion/).
+    :   _**NOTE:**_ conversion variants are described as a Deletion-Insertion (see [_DNA_](/recommendations/DNA/variant/delins/) or [_RNA_](/recommendations/RNA/variant/delins/)).
 
 *	Crick strand
 	:	see plus (+) strand.
@@ -94,7 +94,7 @@ Please note that this Glossary is **work in progress**. Do you encounter missing
 	:	any nucleotide sequence within a gene which, during maturation of the RNA transcript, is not removed by a process called RNA splicing ([Wikipedia](https://en.wikipedia.org/wiki/Exon){:target="\_blank"}, [MESH](https://www.ncbi.nlm.nih.gov/mesh/68005091){:target="\_blank"}). Every exon, except the first and lat exon, is flanked by two **introns**.
     
 *   extension
-    :   a sequence change extending the normal amino acid sequence at the N- or C-terminal end with one or more amino acids ([_protein_](/recommendations/protein/variant/extension/)).
+    :   a sequence change extending the reference amino acid sequence at the N- or C-terminal end with one or more amino acids ([_protein_](/recommendations/protein/variant/extension/)).
 
 *	frame (reading frame)
 	:	**frame 1** is the normal reading frame, using the first nucleotide of each coding triplet of the annotated amino acid reference sequence for translation, starting at the A of the ATG translation initiation codon (nucleotide c.1)
@@ -171,7 +171,7 @@ Please note that this Glossary is **work in progress**. Do you encounter missing
     :   descriptions [_see General/Characters used_](/recommendations/general#characters).
     
 *   mutation
-    :   _**NOTE**:_ please do not use this term, [_see Terminology_](bg-material/basics/).
+    :   _**NOTE**:_ please do not use this term, [_see Terminology_](/bg-material/basics/).
     *   **HGVS**: confusing term, do not use, use **variant** ([_see Basics_](/bg-material/basics/))
     *   _**biology**_: a change in the sequence
     *   _**medicine**_: a sequence variant **associated** with a disease phenotype.
